@@ -8,7 +8,7 @@ const upload = multer();
 router.post("/", auth, upload.single("file"), eventController.createEvent);
 router.get("/", eventController.readEvent);
 router.get("/:id", eventController.readOneEvent);
-router.put("/:id", auth, eventController.updateEvent);
+router.put("/:id", auth, upload.single("file"), eventController.updateEvent);
 router.delete("/:id", auth, eventController.deleteEvent);
 
 module.exports = router;

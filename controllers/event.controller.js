@@ -41,7 +41,6 @@ module.exports.createEvent = async (req, res) => {
     startEvent: req.body.startEvent,
     endEvent: req.body.endEvent,
     picture: req.file !== null ? "/uploads/" + fileName : "",
-    //picture: `${req.protocol}://${req.get("host")}/uploads/${fileName}`,
   });
   try {
     const event = await newEvent.save();
@@ -70,7 +69,12 @@ module.exports.updateEvent = async (req, res) => {
   if (!ObjectID.isValid(req.params.id))
     //tester si l'id est connue dans la base de donnee
     return res.status(400).send("ID unknow:" + req.params.id);
-
+  await pipeline(
+    req.file.stream,
+    fs.createWriteStream(
+      `${__dirname}/../client/public/uploads/${req.file.originalName}`
+    )
+  );
   const updateRecord = {
     title: req.body.title,
     place: req.body.place,
@@ -81,14 +85,18 @@ module.exports.updateEvent = async (req, res) => {
     nbrPlace: req.body.nbrPlace,
     startEvent: req.body.startEvent,
     endEvent: req.body.endEvent,
+    picture: req.file !== null ? "/uploads/" + req.file.originalName : "",
   };
+
   EventModel.findByIdAndUpdate(
     req.params.id,
     { $set: updateRecord },
-    { new: true },
+    //{ new: true },
+    { new: true, upsert: true, setDefaultsOnInsert: true },
     (err, docs) => {
       if (!err) res.send(docs);
-      else console.log("Update error : " + err);
+      else return res.status(500).send({ message: err });
+      //else console.log("Update error : " + err);
     }
   );
 };
