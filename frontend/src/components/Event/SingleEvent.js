@@ -89,9 +89,6 @@ export default class SingleEvent extends Component {
                       <li>
                         <span>Prix: </span> {event.price} dt
                       </li>
-                      <li>
-                        <span>Description: </span>
-                      </li>
                     </ul>
                     <h4> Description:</h4>
                     <p>{event.description}</p>

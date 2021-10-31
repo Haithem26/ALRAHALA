@@ -1,8 +1,22 @@
+#home {
+  background-image: url("../images/rahla.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-#home{
-    background-image: url('../images/al_rahla.jpg');
-    height: 100vh;
-        background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.imglogo {
+  padding-top: 100px;
+  width: 50%;
+  /*border: 5px solid red;*/
+  justify-content: center;
+  margin: auto;
+}
+.imglogo img {
+  width: 60%;
+  height: 50%;
+  /*border: 5px solid blue;*/
+  display: flex;
+  margin: auto;
 }

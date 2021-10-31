@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import PhoneInTalkRoundedIcon from "@mui/icons-material/PhoneInTalkRounded";
 const Footer = () => {
   return (
     <div id="footer">
@@ -7,7 +8,7 @@ const Footer = () => {
         <Row className="row_1">
           <Col className="col_adress">
             <h3>Nous contacter:</h3>
-            <p>TEl:90222895</p>
+            <PhoneInTalkRoundedIcon color="success" /> <p>90222895</p>
           </Col>
           <Col className="col_follow">
             <h3>Suivez-nous</h3>
