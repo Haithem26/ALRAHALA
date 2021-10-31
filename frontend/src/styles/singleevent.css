@@ -1,0 +1,26 @@
+
+.single_card{
+    border: 1px solid black;
+    width: 50% !important;
+    margin: auto;
+}
+.sinImg{
+    height: 250px;
+    width: 400px;
+    margin: auto;
+}
+.sinImg img{
+    height: 100%;
+    width: 100%;
+}
+.singbody h1 {
+    text-align: center;
+}
+.singbody ul li span{
+    font-weight: bold;
+}
+.all_btn_sing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

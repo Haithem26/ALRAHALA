@@ -1,0 +1,141 @@
+.contact-container {
+    background-color: white;
+    padding-top: 150x;
+    padding-bottom: 20px;
+    display: flex;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.container h2{
+    text-decoration: underline #FDD835;
+    text-shadow:10px 10px 10px;
+}
+.contact-form{
+    margin: auto;
+    width: 80%;
+}
+.style-label, .style-textarea{
+    display: flex;
+    flex-direction: column;
+}
+.style-label input {
+    width: 60%;
+    margin: 0.8rem 0;
+    border-radius: 4px;
+    padding:10px;
+}
+
+textarea{
+    width: 100%;
+    height: 180px;
+    border-radius: 4px;
+}
+.successMsg{
+    display: none;
+    color: green;
+    font-weight: bold;
+}
+
+/*GOOGLE MAPS*/
+.maps{
+    width: 100%;
+    border-left: 2px solid #FDD835;
+    display: flex;
+    flex-direction: column; 
+ 
+}
+.contact_number{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 20px;
+}
+Iframe {
+    box-shadow: 10px 10px 10px 10px grey;
+    width:70%; 
+    height: 70%;
+    border-radius: 10px;
+    margin: auto;
+}
+
+/*This Media Query use for iPad Portrait View*/
+@media only screen and (min-width:768px) and (max-width:991px){
+
+    .contact_number{
+        font-size: 15px;
+    }
+
+    .style-label input {
+        width: 90%;
+        padding:5px;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+
+    .contact_number{
+        font-size: 15px;
+        margin-top: 25px;
+    }
+
+    .style-label input {
+        width: 90%;
+        padding:5px;
+    }
+    .contact-container{
+        flex-direction: column;
+    }
+    .maps{
+        flex-direction: column-reverse; 
+    }
+    Iframe {
+        margin-top: 15px;
+        width: 80%;
+    }
+
+    .sendButton{
+        font-size: 14px;
+    }
+    .contact-form{
+        margin: auto;
+        width: 100%;
+    }
+
+    
+}
+
+@media screen and (max-width: 400px){
+    .container h2{
+        font-size: 20px;
+    }
+    .contact-form{
+        margin: auto;
+        width: 95%;
+        font-size: 14px;
+    }
+
+    .style-label input {
+        width: 90%;
+        margin: 0.8rem 0;
+        border-radius: 4px;
+        padding: 3px;
+    }
+    
+    textarea{
+        width: 90%;
+        height: 100px;
+        border-radius: 4px;
+    }
+
+    .sendButton{
+        font-size: 12px;
+    }
+    #send-btn{
+        float: left!important;;
+    }
+
+}
+

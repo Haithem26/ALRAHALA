@@ -1,0 +1,36 @@
+#sign-in{
+    background-color: white;
+    height: 90vh;
+    /*background-color: rgb(230, 230, 230);*/
+}
+
+#sign-in .signin-form{
+    background-color: orangered;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px;
+    width: 30% !important;
+    margin: auto;
+    padding: 25px;
+}
+#sign-in .signinImg{
+    height: 150px !important;
+    width: 200px !important;;
+    margin: auto;
+}
+#sign-in .signinImg img{
+    height: 100%;
+    width: 100%;
+}
+#sign-in .form-label{
+   font-weight: bold;
+    height: 100%;
+    
+}
+#sign-in .btn-primary{
+    float:right
+    
+}
+#sign-in .title_signin{
+text-align: center;
+}
+
