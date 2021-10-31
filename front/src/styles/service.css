@@ -1,0 +1,23 @@
+.servParallax{  
+    background-image: url('../images/img-cover.jpg');
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+
+}
+.video_pres{
+    height: 300px;
+}
+.video_pres iframe{
+    width: 100%;
+    height: 100%;
+}
+.w-100{
+    border-radius: 10px;
+}
+.all_carousel .carousel, .all_carousel .carousel img {
+    max-height: 300px;
+}

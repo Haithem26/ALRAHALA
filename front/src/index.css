@@ -1,0 +1,20 @@
+@import "./styles/home.css";
+@import "./styles/login.css";
+@import "./styles/newevent.css";
+@import "./styles/singleevent.css";
+@import "./styles/listevent.css";
+@import "./styles/service.css";
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "./components/Navigations/navi.css";
+@import "./components/Navigations/footer.css";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#listevent,
+#sign-in,
+#sign-up,
+#services {
+  padding-top: 90px;
+}

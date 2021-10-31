@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+#footer {
+  padding: 20px 0 0 0;
+  height: 300px;
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+}
+.col_follow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid black;
+}
+.col_follow h3 {
+  text-align: center;
+}
+.wrapper {
+  margin-top: 20px !important;
+  margin: auto;
+}
+
+.row_2 {
+  margin: auto;
+  border: 1px solid black;
+  text-align: center;
+}
+.col_adress {
+  text-align: center;
+}
+/* style of icons social media*/
+.wrapper .button {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  float: left;
+  margin: 0 5px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover {
+  width: 200px;
+}
+.wrapper .button .icon {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+  color: white;
+}
+.wrapper a {
+  color: white;
+}
+#ifacebook {
+  background-color: #4267b2;
+}
+#iinstagram {
+  background: #e1306c;
+}
+#iyoutube {
+  background: #ff0000;
+}
+.wrapper #facebook:hover .icon {
+  background: #4267b2;
+}
+
+.wrapper #instagram:hover .icon {
+  background: #e1306c;
+}
+.wrapper #youtube:hover .icon {
+  background: #ff0000;
+}
+.wrapper .button .icon i {
+  font-size: 25px;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon i {
+  color: #fff;
+}
+.wrapper .button span {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:nth-child(1) span {
+  color: #4267b2;
+}
+.wrapper #instagram span {
+  color: #e1306c;
+}
+
+.wrapper #youtube span {
+  color: #ff0000;
+}
