@@ -8,9 +8,12 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import "./components/Navigations/navi.css";
 @import "./components/Navigations/footer.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
 * {
   margin: 0;
   padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 #listevent,
@@ -18,5 +21,8 @@
 #sign-up,
 #services,
 #singleevent {
-  padding-top: 90px;
+  padding-top: 100px;
+}
+.new_event {
+  padding-top: 120px;
 }

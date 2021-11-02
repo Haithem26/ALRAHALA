@@ -1,37 +1,40 @@
-.navigation .navbar{
-  background-color:rgba(0,0,0,0.6) !important;
+.navigation .navbar {
+  background-color: rgba(0, 0, 0, 0.6) !important;
 }
-.navigation .container{
+.navigation .container {
   display: contents !important;
 }
 .navigation .d-inline-block {
   margin-left: 37px;
   margin-right: 20px;
 }
-.navigation .navbar-light .navbar-nav .nav-link:hover{
-  color:orangered
+.navigation .navbar-light .navbar-nav .nav-link:hover {
+  color: orangered;
 }
 
 .navbar-nav {
-    letter-spacing: 1px;
-    width: auto;
-    margin: auto;
+  letter-spacing: 1px;
+  width: auto;
+  margin: auto;
 }
-.navbar-dark .navbar-nav .nav-link{
+.navbar-dark .navbar-nav .nav-link {
   color: white !important;
   font-size: 18px;
 }
-.navbar-dark .navbar-nav .nav-link{
+.navbar-dark .navbar-nav .nav-link {
   color: white !important;
   font-size: 18px;
 }
-.navbar-dark .navbar-nav .nav-link:hover{
+.navbar-dark .navbar-nav .nav-link:hover {
   color: orangered !important;
 }
 
-@media screen and (max-width: 670px){
-
-.navbar-dark .navbar-nav .nav-link{
-  font-size: 15px;
+.d-inline-block {
+  height: 80px;
+  width: 100%;
 }
+@media screen and (max-width: 670px) {
+  .navbar-dark .navbar-nav .nav-link {
+    font-size: 15px;
+  }
 }

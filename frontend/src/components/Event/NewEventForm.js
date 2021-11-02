@@ -41,7 +41,7 @@ const NewEventForm = ({ history }) => {
   };
 
   return (
-    <Container>
+    <Container className="new_event">
       <Row>
         <h3>Nouveau évennement:</h3>
         <div className="add_event">

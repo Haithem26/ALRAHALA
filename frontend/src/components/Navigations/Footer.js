@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import PhoneInTalkRoundedIcon from "@mui/icons-material/PhoneInTalkRounded";
+import Iframe from "react-iframe";
 const Footer = () => {
   return (
     <div id="footer">
@@ -9,6 +10,7 @@ const Footer = () => {
           <Col className="col_adress">
             <h3>Nous contacter:</h3>
             <PhoneInTalkRoundedIcon color="success" /> <p>90222895</p>
+            <p>alrahala.tn@gmail.com</p>
           </Col>
           <Col className="col_follow">
             <h3>Suivez-nous</h3>
@@ -50,6 +52,7 @@ const Footer = () => {
               </a>
             </div>
           </Col>
+          <Col></Col>
         </Row>
         <Row className="row_2">
           <p> @2021 Copyright: Alrahala</p>

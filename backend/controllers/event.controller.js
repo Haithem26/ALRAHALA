@@ -26,7 +26,9 @@ module.exports.createEvent = async (req, res) => {
 
     await pipeline(
       req.file.stream,
-      fs.createWriteStream(`${__dirname}/../client/public/uploads/${fileName}`)
+      fs.createWriteStream(
+        `${__dirname}/../../frontend/public/uploads/${fileName}`
+      )
     );
   }
 
@@ -74,7 +76,7 @@ module.exports.updateEvent = async (req, res) => {
     await pipeline(
       req.file.stream,
       fs.createWriteStream(
-        `${__dirname}/../client/public/uploads/${req.file.originalName}`
+        `${__dirname}/../../frontend/public/uploads/${req.file.originalName}`
       )
     );
     //ajout image
@@ -82,34 +84,37 @@ module.exports.updateEvent = async (req, res) => {
     EventModel.findOne({ _id: req.params.id })
       .then((event) => {
         const fileName = event.picture.split("/uploads/")[1];
-        fs.unlink(`${__dirname}/../client/public/uploads/${fileName}`, () => {
-          //supprimer l'objet
-          const updateRecord = {
-            title: req.body.title,
-            place: req.body.place,
-            description: req.body.description,
-            typeEvent: req.body.typeEvent,
-            urlEvent: req.body.urlEvent,
-            price: req.body.price,
-            nbrPlace: req.body.nbrPlace,
-            startEvent: req.body.startEvent,
-            endEvent: req.body.endEvent,
-            picture:
-              req.file !== null ? "/uploads/" + req.file.originalName : "",
-          };
+        fs.unlink(
+          `${__dirname}/../../frontend/public/uploads/${fileName}`,
+          () => {
+            //supprimer l'objet
+            const updateRecord = {
+              title: req.body.title,
+              place: req.body.place,
+              description: req.body.description,
+              typeEvent: req.body.typeEvent,
+              urlEvent: req.body.urlEvent,
+              price: req.body.price,
+              nbrPlace: req.body.nbrPlace,
+              startEvent: req.body.startEvent,
+              endEvent: req.body.endEvent,
+              picture:
+                req.file !== null ? "/uploads/" + req.file.originalName : "",
+            };
 
-          EventModel.findByIdAndUpdate(
-            req.params.id,
-            { $set: updateRecord },
-            //{ new: true },
-            { new: true, upsert: true, setDefaultsOnInsert: true },
-            (err, docs) => {
-              if (!err) res.send(docs);
-              else return res.status(500).send({ message: err });
-              //else console.log("Update error : " + err);
-            }
-          );
-        });
+            EventModel.findByIdAndUpdate(
+              req.params.id,
+              { $set: updateRecord },
+              //{ new: true },
+              { new: true, upsert: true, setDefaultsOnInsert: true },
+              (err, docs) => {
+                if (!err) res.send(docs);
+                else return res.status(500).send({ message: err });
+                //else console.log("Update error : " + err);
+              }
+            );
+          }
+        );
       })
       .catch((err) => res.status(500).json({ err }));
 
@@ -147,57 +152,17 @@ module.exports.deleteEvent = async (req, res) => {
   EventModel.findOne({ _id: req.params.id })
     .then((event) => {
       const fileName = event.picture.split("/uploads/")[1];
-      fs.unlink(`${__dirname}/../client/public/uploads/${fileName}`, () => {
-        //supprimer l'objet
-        EventModel.findByIdAndRemove(req.params.id, (err, docs) => {
-          if (!err) {
-            res.send(docs);
-          } else console.log("delete error : " + err);
-        });
-      });
+      fs.unlink(
+        `${__dirname}/../../frontend/public/uploads/${fileName}`,
+        () => {
+          //supprimer l'objet
+          EventModel.findByIdAndRemove(req.params.id, (err, docs) => {
+            if (!err) {
+              res.send(docs);
+            } else console.log("delete error : " + err);
+          });
+        }
+      );
     })
     .catch((err) => res.status(500).json({ err }));
 };
-
-/*
-
-module.exports.updateEvent = async (req, res) => {
-  if (!ObjectID.isValid(req.params.id))
-    //tester si l'id est connue dans la base de donnee
-    return res.status(400).send("ID unknow:" + req.params.id);
-    //ajout image
-  await pipeline(
-    req.file.stream,
-    fs.createWriteStream(
-      `${__dirname}/../client/public/uploads/${req.file.originalName}`
-    )
-  );
-  //const updateRecord = req.file ? { }: {}
-  const updateRecord = {
-    title: req.body.title,
-    place: req.body.place,
-    description: req.body.description,
-    typeEvent: req.body.typeEvent,
-    urlEvent: req.body.urlEvent,
-    price: req.body.price,
-    nbrPlace: req.body.nbrPlace,
-    startEvent: req.body.startEvent,
-    endEvent: req.body.endEvent,
-    picture: req.file !== null ? "/uploads/" + req.file.originalName : "",
-  };
-
-  EventModel.findByIdAndUpdate(
-    req.params.id,
-    { $set: updateRecord },
-    //{ new: true },
-    { new: true, upsert: true, setDefaultsOnInsert: true },
-    (err, docs) => {
-      if (!err) res.send(docs);
-      else return res.status(500).send({ message: err });
-      //else console.log("Update error : " + err);
-    }
-  );
-};
-
-
-*/

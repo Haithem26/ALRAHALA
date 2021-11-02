@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div id="home">
       <div data-aos="fade-down" className="imglogo">
-        <img src={logo}></img>
+        <img src={logo} alt="bonjour"></img>
       </div>
     </div>
   );

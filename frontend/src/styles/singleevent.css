@@ -1,6 +1,6 @@
 #singleevent {
-  background-image: url("../images/feh1.jpg");
-  height: 100vh;
+  background-image: url("../images/nat2.jpg");
+  min-height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -8,11 +8,12 @@
 }
 
 .single_card {
-  border: 1px solid white;
   padding-top: 20px;
   border-radius: 5px;
   width: 50% !important;
   margin: auto;
+  background-color: rgba(0, 0, 0, 0.466);
+  box-shadow: 10px 10px 10px black;
 }
 .sinImg {
   height: 300px;
@@ -35,4 +36,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.descrip {
+  background-color: rgba(0, 0, 0, 0.726);
+  overflow: auto;
+  max-height: 400px;
 }

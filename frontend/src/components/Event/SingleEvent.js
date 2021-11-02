@@ -90,8 +90,10 @@ export default class SingleEvent extends Component {
                         <span>Prix: </span> {event.price} dt
                       </li>
                     </ul>
-                    <h4> Description:</h4>
-                    <p>{event.description}</p>
+                    <div className="descrip">
+                      <h4> Description:</h4>
+                      <p>{event.description}</p>
+                    </div>
                   </div>
 
                   <div className="all_btn_sing">
