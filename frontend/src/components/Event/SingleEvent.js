@@ -57,7 +57,7 @@ export default class SingleEvent extends Component {
 
     if (isauth) {
       return (
-        <div id="singleEvent">
+        <div id="singleevent">
           <Container>
             <Row>
               <div className="single_card">
@@ -126,7 +126,7 @@ export default class SingleEvent extends Component {
       );
     } else {
       return (
-        <div id="singleEvent">
+        <div id="singleevent">
           <Container>
             <Row>
               <div className="single_card">

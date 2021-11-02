@@ -1,72 +1,75 @@
-#listevent .cardEvent{
-    border: 1px solid white;
-    display: flex;
-    margin: 5px 0 5px 0;
-    border-radius: 5px;
+#listevent .cardEvent {
+  border: 1px solid white;
+  display: flex;
+  margin: 5px 0 5px 0;
+  border-radius: 5px;
 }
-.parallax{
-    background-image: url('../images/body.jpg');
+.card-flex {
+  border: 2px solid white;
+  box-shadow: 50px rgb(252, 252, 252);
+  width: 80%;
+  margin: auto;
+  border-radius: 10px;
+}
+.parallax {
+  background-image: url("../images/body.jpg");
 
-    height: 100%; 
-    min-height: 90vh;
-  
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  height: 100%;
+  min-height: 100vh;
 
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-
-.title_list{
-    display: flex;
-    justify-content: space-around;
-    margin: auto;
-    padding: 10px;
-    color:orangered
+.title_list {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  padding: 10px;
+  color: orangered;
 }
-.title_list button{
-height: 100%;
+.title_list button {
+  height: 100%;
 }
-.imgCard{
-    height: 230px;
-    width: 360px;
-    padding: 10px;
-    border-radius: 10px;
+.imgCard {
+  height: 230px;
+  width: 360px;
+  padding: 10px;
+  border-radius: 10px;
 }
 .imgCard img {
-    height: 100%;
-    width: 100%;
-    border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
 }
-.bodyCard{
-    color: white;
-    width: 100%;
+.bodyCard {
+  color: white;
+  width: 100%;
 }
-.header_card{
-    width: 100%;
+.header_card {
+  width: 100%;
 }
-.all_btn{
-    width: 100%;
-    justify-content: flex-end;
-    display: flex;
+.all_btn {
+  width: 100%;
+  justify-content: flex-end;
+  display: flex;
 }
-.btn-access{
-    margin: 5px;
-   
+.btn-access {
+  margin: 5px;
 }
-.btn-access a{
-    text-decoration: none;
-    color: white;
+.btn-access a {
+  text-decoration: none;
+  color: white;
 }
-.btn-access a:hover{
-    
-    color: white;
+.btn-access a:hover {
+  color: white;
 }
 .header_card h1 {
-    font-size: 25px;
+  font-size: 25px;
 }
 .header_card span {
-    font-weight: bold;
+  font-weight: bold;
 }
