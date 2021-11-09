@@ -14,30 +14,96 @@ const NewEventForm = ({ history }) => {
   const [startEvent, setStartEvent] = useState("");
   const [endEvent, setEndEvent] = useState("");
   const [file, setFile] = useState();
+  const today = new Date().toLocaleString("fr-FR", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric",
+  });
 
+  console.log("today global", today);
   const handlePost = async (e) => {
     var token = getItem("miniblogToken");
     const config = {
       headers: { Authorization: `Bearer ${token}` },
     };
+
     e.preventDefault();
-    const data = new FormData();
-    data.append("title", title);
-    data.append("place", place);
-    data.append("description", description);
-    data.append("typeEvent", typeEvent);
-    data.append("urlEvent", urlEvent);
-    data.append("price", price);
-    data.append("nbrPlace", nbrPlace);
-    data.append("startEvent", startEvent);
-    data.append("endEvent", endEvent);
-    data.append("file", file);
-    axios
-      .post(`${process.env.REACT_APP_API_URL}api/event`, data, config)
-      .then((res) => {
-        history.push("/list-event");
+    const err_formd = document.getElementById("err_form");
+    const err_date = document.getElementById("err_form");
+
+    if (
+      title === "" ||
+      place === "" ||
+      description === "" ||
+      typeEvent === "" ||
+      urlEvent === "" ||
+      price === "" ||
+      nbrPlace === "" ||
+      startEvent === "" ||
+      endEvent === "" ||
+      file === null
+    ) {
+      err_formd.innerHTML = `<p className="danger">Vous avez un champs vide </p>`;
+    } else if (
+      new Date(startEvent).toLocaleString("fr-FR", {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric",
+      }) <
+      new Date(today).toLocaleString("fr-FR", {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric",
       })
-      .catch((err) => console.log(err));
+    ) {
+      err_date.innerHTML = `<p className="danger">date incorrect</p>`;
+      console.log("startEvent", startEvent);
+      console.log("today in test", today);
+      console.log("test date ok");
+    } else {
+      const data = new FormData();
+      data.append("title", title);
+      data.append("place", place);
+      data.append("description", description);
+      data.append("typeEvent", typeEvent);
+      data.append("urlEvent", urlEvent);
+      data.append("price", price);
+      data.append("nbrPlace", nbrPlace);
+      data.append("startEvent", startEvent);
+      data.append("endEvent", endEvent);
+      data.append("file", file);
+
+      axios
+        .post(`${process.env.REACT_APP_API_URL}api/event`, data, config)
+        .then((res) => {
+          console.log(
+            "startevent",
+            new Date(startEvent).toLocaleString("fr-FR", {
+              weekday: "long",
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+              hour: "numeric",
+              minute: "numeric",
+              second: "numeric",
+            })
+          );
+          history.push("/list-event");
+        })
+        .catch((err) => console.log(err));
+    }
   };
 
   return (
@@ -175,6 +241,7 @@ const NewEventForm = ({ history }) => {
                 value={description}
               />
             </Form.Group>
+            <div id="err_form"> </div>
 
             <Button variant="primary" onClick={handlePost}>
               Valider

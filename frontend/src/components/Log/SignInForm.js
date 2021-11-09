@@ -11,6 +11,8 @@ const SignInForm = ({ history }) => {
     password: "",
   });
 
+  const afficherror = document.getElementById("err");
+
   const handleChange = ({ currentTarget }) => {
     const { name, value } = currentTarget;
 
@@ -26,6 +28,7 @@ const SignInForm = ({ history }) => {
       history.replace("/list-event");
     } catch ({ response }) {
       console.log(response);
+      afficherror.innerHTML = response.data.error;
     }
   };
 
@@ -34,7 +37,7 @@ const SignInForm = ({ history }) => {
       <Container>
         <Row>
           <div className="signinImg">
-            <img src={logo}></img>
+            <img src={logo} alt=" logo_rahala"></img>
           </div>
         </Row>
         <Row>
@@ -46,6 +49,7 @@ const SignInForm = ({ history }) => {
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email</Form.Label>
                 <Form.Control
+                  required
                   type="email"
                   name="email"
                   placeholder="Enter email"
@@ -56,6 +60,7 @@ const SignInForm = ({ history }) => {
               <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
                 <Form.Control
+                  required
                   type="password"
                   placeholder="Password"
                   onChange={handleChange}
@@ -66,6 +71,7 @@ const SignInForm = ({ history }) => {
                 Se connecter
               </Button>
             </Form>
+            <div id="err"> </div>
           </div>
         </Row>
       </Container>

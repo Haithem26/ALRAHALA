@@ -7,34 +7,44 @@ const EventSchema = new mongoose.Schema(
     },
     picture: {
       type: String,
+      require: true,
     },
     title: {
       type: String,
+      require: true,
     },
     place: {
       type: String,
+      require: true,
     },
     description: {
       type: String,
       trim: true,
+      require: true,
     },
     typeEvent: {
       type: String,
+      require: true,
     },
     urlEvent: {
       type: String,
+      require: true,
     },
     price: {
       type: Number,
+      require: true,
     },
     nbrPlace: {
       type: Number,
+      require: true,
     },
     startEvent: {
       type: Date,
+      require: true,
     },
     endEvent: {
       type: Date,
+      require: true,
     },
   },
   {

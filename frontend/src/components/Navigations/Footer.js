@@ -19,6 +19,8 @@ const Footer = () => {
               <a
                 href="https://www.facebook.com/groups/alrahala"
                 target="_blank"
+                without
+                rel="noreferrer"
               >
                 <div className="button" id="facebook">
                   <div className="icon" id="ifacebook">
@@ -31,6 +33,8 @@ const Footer = () => {
               <a
                 href="https://www.instagram.com/al.rahala.tn/?hl=fr"
                 target="_blank"
+                without
+                rel="noreferrer"
               >
                 <div className="button" id="instagram">
                   <div className="icon" id="iinstagram">
@@ -42,6 +46,8 @@ const Footer = () => {
               <a
                 href="https://www.youtube.com/channel/UCdmCo3RRPBRPl5d6qCi4vkQ/videos"
                 target="_blank"
+                without
+                rel="noreferrer"
               >
                 <div className="button" id="youtube">
                   <div className="icon" id="iyoutube">

@@ -22,7 +22,7 @@ exports.signIn = (req, res, next) => {
   User.findOne({ email: req.body.email })
     .then((user) => {
       if (!user) {
-        return res.status(401).json({ error: "Utilisateur non trouvé !" });
+        return res.status(401).json({ error: "email incorrect" });
       }
       bcrypt
         .compare(req.body.password, user.password)
@@ -36,6 +36,7 @@ exports.signIn = (req, res, next) => {
               expiresIn: "1h",
             }),
           });
+          console.log("token back", token);
         })
         .catch((error) => res.status(500).json({ error }));
     })

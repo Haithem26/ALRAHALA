@@ -31,7 +31,6 @@ module.exports.createEvent = async (req, res) => {
       )
     );
   }
-
   const newEvent = new EventModel({
     title: req.body.title,
     place: req.body.place,
