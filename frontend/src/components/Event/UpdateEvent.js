@@ -87,7 +87,7 @@ export default class UpdateEvent extends Component {
 
   render() {
     return (
-      <Container>
+      <Container id="updatepage">
         <Row>
           <Form>
             <Row className="mb-3">

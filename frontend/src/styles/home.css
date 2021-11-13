@@ -9,14 +9,78 @@
 .imglogo {
   padding-top: 100px;
   width: 50%;
-  /*border: 5px solid red;*/
   justify-content: center;
   margin: auto;
 }
 .imglogo img {
   width: 60%;
   height: 50%;
-  /*border: 5px solid blue;*/
   display: flex;
   margin: auto;
+}
+
+.btnHome {
+  margin: auto;
+  width: 500px;
+  height: 100px;
+  bottom: 0;
+  float: inline-end;
+  margin-top: -40px;
+}
+
+.container33 {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.container33 .button,
+.container33 .button2 {
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px black;
+  border: none;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  /*color: #eeeeee;*/
+  color: black;
+  font-weight: 600;
+  font-size: 15px;
+  /*background-color: rgba(20, 18, 18, 0.897);*/
+  background-color: rgba(255, 255, 255, 0.808);
+  padding: 15px 50px;
+  margin: 0 auto;
+}
+.container33 .button span,
+.container33 .button2 span {
+  position: relative;
+  z-index: 1;
+}
+.container33 .button:after,
+.container33 .button2:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 470%;
+  width: 140%;
+  background: orangered;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: translateX(-100%) translateY(-25%) rotate(45deg);
+  transform: translateX(-100%) translateY(-25%) rotate(45deg);
+}
+.container33 .button2:after {
+  -webkit-transform: translateX(-100%) translateY(-35%) rotate(45deg);
+  transform: translateX(-100%) translateY(-35%) rotate(45deg);
+}
+.container33 .button:hover:after,
+.container33 .button2:hover:after {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
 }

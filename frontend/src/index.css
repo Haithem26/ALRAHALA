@@ -20,8 +20,8 @@
 #sign-in,
 #sign-up,
 #services,
-#singleevent {
-  padding-top: 100px;
+#singleevent, #updatepage {
+  padding-top: 120px;
 }
 .new_event {
   padding-top: 120px;

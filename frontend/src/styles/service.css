@@ -14,6 +14,7 @@
 .video_pres iframe {
   width: 100%;
   height: 100%;
+  border: none !important;
 }
 .w-100 {
   border-radius: 10px;

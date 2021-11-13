@@ -35,7 +35,7 @@ const Navi = () => {
             <Nav className="me-auto">
               <Nav.Link href="/">Acceuil</Nav.Link>
               <Nav.Link href="/services">Services</Nav.Link>
-              <Nav.Link href="/list-event">Evennements</Nav.Link>
+              <Nav.Link href="/list-event">Evénements</Nav.Link>
               <Nav.Link href="/about_us">A Propos</Nav.Link>
               <Nav.Link href="/contact">Contact</Nav.Link>
               <Nav.Link href="/sign-up">Inscription</Nav.Link>

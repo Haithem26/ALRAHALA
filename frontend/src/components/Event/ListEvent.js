@@ -40,7 +40,7 @@ export default class ListEvent extends Component {
       return (
         <div id="listevent">
           <div className="title_list">
-            <h1>Nos evennements:</h1>
+            <h1>Nos événements:</h1>
           </div>
           <div className="card-flex">
             {
@@ -105,7 +105,7 @@ export default class ListEvent extends Component {
       return (
         <div id="listevent">
           <div className="title_list">
-            <h1>Nos evennements:</h1>
+            <h1>Nos événements:</h1>
             <Link to="/add-new-event">
               <Button variant="danger">Ajouter un évenement</Button>{" "}
             </Link>
