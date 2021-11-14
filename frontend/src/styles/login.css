@@ -77,3 +77,8 @@
   background-color: #a01823;
   border-color: #a01823;
 }
+
+.err_text {
+  color: red;
+  margin-left: 10%;
+}

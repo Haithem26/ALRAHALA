@@ -67,11 +67,14 @@ const SignInForm = ({ history }) => {
                   name="password"
                 />
               </Form.Group>
+
+              <div id="err" className="err_text">
+                {" "}
+              </div>
               <Button variant="primary" onClick={handleSubmit}>
                 Se connecter
               </Button>
             </Form>
-            <div id="err"> </div>
           </Col>
         </Row>
       </Container>

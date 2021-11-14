@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Form, Button, Container, Row, Col } from "react-bootstrap";
+import logo from "../../images/alrahalalogo.png";
 
 const SignUpForm = () => {
   const [formSubmit, setFormSubmit] = useState(false);
@@ -10,24 +12,14 @@ const SignUpForm = () => {
 
   const handleRegister = async (e) => {
     e.preventDefault();
-    const terms = document.getElementById("terms");
-    const emailError = document.querySelector(".email.error");
-    const passwordError = document.querySelector(".password.error");
-    const passwordConfirmError = document.querySelector(
-      ".password-confirm.error"
-    );
-    const termsError = document.querySelector(".terms.error");
+    const emailError = document.getElementById("err2");
+    const passwordError = document.getElementById("err2");
+    const passwordConfirmError = document.getElementById("err2");
 
     passwordConfirmError.innerHTML = "";
-    termsError.innerHTML = "";
 
-    if (password !== controlPassword || !terms.checked) {
-      if (password !== controlPassword)
-        passwordConfirmError.innerHTML =
-          "Les mots de passe ne correspondent pas";
-
-      if (!terms.checked)
-        termsError.innerHTML = "Veuillez valider les conditions générales";
+    if (password !== controlPassword) {
+      passwordConfirmError.innerHTML = "Les mots de passe ne correspondent pas";
     } else {
       await axios({
         method: "post",
@@ -53,6 +45,73 @@ const SignUpForm = () => {
   };
 
   return (
+    <div id="sign-up">
+      <Container className="signinContainer">
+        <Row>
+          <Col sm={4} className="colImg">
+            <div className="signinImg">
+              <img src={logo} alt=" logo_rahala"></img>
+            </div>{" "}
+          </Col>
+          <Col sm={8} className="colForm">
+            <Form className="signForm">
+              <Form.Group className="group_title">
+                <Form.Text className="title_signin">INSCRIPTION</Form.Text>
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Email:</Form.Label>
+                <Form.Control
+                  required
+                  type="email"
+                  name="email"
+                  placeholder="Enter email"
+                  id="email"
+                  onChange={(e) => setEmail(e.target.value)}
+                  value={email}
+                />
+              </Form.Group>
+
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Mot de passe:</Form.Label>
+                <Form.Control
+                  required
+                  type="password"
+                  placeholder="Password"
+                  id="password"
+                  onChange={(e) => setPassword(e.target.value)}
+                  value={password}
+                />
+              </Form.Group>
+
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Confirmer mot de passe:</Form.Label>
+                <Form.Control
+                  required
+                  type="password"
+                  placeholder="Password"
+                  id="password-conf"
+                  onChange={(e) => setControlPassword(e.target.value)}
+                  value={controlPassword}
+                />
+              </Form.Group>
+              <div id="err2" className="err_text">
+                {" "}
+              </div>
+              <Button variant="primary" onClick={handleRegister}>
+                Se connecter
+              </Button>
+            </Form>
+          </Col>
+        </Row>
+      </Container>
+    </div>
+  );
+};
+
+export default SignUpForm;
+/*
+
+return (
     <div id="sign-up">
       <form action="" onSubmit={handleRegister} id="sign-up-form">
         <label htmlFor="email">Email</label>
@@ -101,6 +160,5 @@ const SignUpForm = () => {
       </form>
     </div>
   );
-};
 
-export default SignUpForm;
+*/
