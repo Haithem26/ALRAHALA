@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Form, Button, Container, Row } from "react-bootstrap";
+import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import logo from "../../images/alrahalalogo.png";
 import { login } from "../../services/AuthApi";
 import Auth from "../../contexts/Auth";
@@ -34,20 +34,20 @@ const SignInForm = ({ history }) => {
 
   return (
     <div id="sign-in">
-      <Container>
+      <Container className="signinContainer">
         <Row>
-          <div className="signinImg">
-            <img src={logo} alt=" logo_rahala"></img>
-          </div>
-        </Row>
-        <Row>
-          <div className="signin-form">
-            <Form>
-              <Form.Group>
-                <Form.Text className="title_signin">Connexion</Form.Text>
+          <Col sm={4} className="colImg">
+            <div className="signinImg">
+              <img src={logo} alt=" logo_rahala"></img>
+            </div>{" "}
+          </Col>
+          <Col sm={8} className="colForm">
+            <Form className="signForm">
+              <Form.Group className="group_title">
+                <Form.Text className="title_signin">CONNEXION</Form.Text>
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email</Form.Label>
+                <Form.Label>Email:</Form.Label>
                 <Form.Control
                   required
                   type="email"
@@ -58,7 +58,7 @@ const SignInForm = ({ history }) => {
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
+                <Form.Label>Password:</Form.Label>
                 <Form.Control
                   required
                   type="password"
@@ -72,7 +72,7 @@ const SignInForm = ({ history }) => {
               </Button>
             </Form>
             <div id="err"> </div>
-          </div>
+          </Col>
         </Row>
       </Container>
     </div>

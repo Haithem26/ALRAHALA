@@ -17,10 +17,10 @@
 }
 
 #listevent,
-#sign-in,
 #sign-up,
 #services,
-#singleevent, #updatepage {
+#singleevent,
+#updatepage {
   padding-top: 120px;
 }
 .new_event {
