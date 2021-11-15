@@ -8,16 +8,43 @@
   margin-bottom: 15px;
   box-shadow: 5px 5px 5px rgb(0, 0, 0);
   border-radius: 10px;
-  width: 100% !important;
+  width: 70% !important;
 }
 .contact_row {
   display: flex;
   flex-direction: row;
 }
+
 .contact_col_2 {
   background-image: url("../images/contactimage.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   border-radius: 5px;
+}
+@media screen and (max-width: 991px) {
+  #contact .container {
+    width: 100% !important;
+  }
+  .contact_col_2 {
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact_col_1 {
+    font-size: 14px;
+  }
+  .contact_col_1 .form-control {
+    font-size: 12px;
+  }
+  .contact_col_1 .css-sghohy-MuiButtonBase-root-MuiButton-root {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .contact_col_2 {
+    display: block;
+    display: none;
+  }
 }
