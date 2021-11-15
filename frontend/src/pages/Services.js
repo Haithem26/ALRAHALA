@@ -10,7 +10,7 @@ function Services() {
   return (
     <div id="services" className="servParallax">
       <Container fluid className="headerservice">
-        <Row>
+        <Row className="serviceheader">
           <Col>
             <div id="presentation">
               <h1>Qui sommes nous ?</h1>
@@ -26,8 +26,7 @@ function Services() {
           </Col>
           <Col className="video_pres">
             <iframe
-              width="560"
-              height="315"
+              className="iframestyle"
               src="https://www.youtube.com/embed/2UPWq8gWuVo"
               title="YouTube video player"
               frameborder="0"
@@ -38,17 +37,17 @@ function Services() {
         </Row>
       </Container>
 
-      <Container>
+      <Container className="container_service2">
         <h1>Nos Services</h1>
-        <Row>
+        <Row className="row_1">
           <Col>
             <Randonne />
           </Col>
           <Col>
             <h2>Randonnée Pédestre</h2>
-            <span>6 heures 30 minutes ou plus · À partir de 30 DT</span>
             <p>
-              La randonnée est une activité douce et accessible à tous, qui fait
+              6 heures 30 minutes ou plus · À partir de 30 DT <br /> La
+              randonnée est une activité douce et accessible à tous, qui fait
               travailler le cardio (en altitude, on s’essouffle plus vite) et
               qui fait travailler presque toutes les parties du corps. Rien ne
               vaut une bonne fatigue d’après rando; sommeil profond et zénitude
@@ -59,11 +58,12 @@ function Services() {
             </p>
           </Col>
         </Row>
-        <Row>
+        <Row className="row_2">
           <Col>
             <h2>Camping</h2>
-            <span>8 heures 30 minutes ou plus · À partir de 45 DT</span>
             <p>
+              8 heures 30 minutes ou plus · À partir de 45 DT
+              <br />
               Le camping est une activité touristique qui consiste à séjourner
               au même endroit sous une tente, une caravane ou encore dans un
               camping-car. On peut s'installer sur un terrain de camping
@@ -78,29 +78,28 @@ function Services() {
             <Camping />
           </Col>
         </Row>
-        <Row>
+        <Row className="row_1">
           <Col>
             <Plongee />
           </Col>
           <Col>
             <h2>Plongée sous-marine</h2>
-            <span>15 minutes ou plus · À partir de 85 DT</span>
             <p>
-              La plongée sous-marine est une activité consistant à rester sous
-              l'eau marine soit en apnée dans le cas de la plongée libre, soit
-              en respirant à l'aide d'un narguilé (tuyau apportant de l'air
-              depuis la surface) ou le plus souvent en s'équipant d'une
-              bouteille de plongée dans le cas de la plongée en scaphandre
-              autonome.
+              15 minutes ou plus · À partir de 85 DT <br /> La plongée
+              sous-marine est une activité consistant à rester sous l'eau marine
+              soit en apnée dans le cas de la plongée libre, soit en respirant à
+              l'aide d'un narguilé (tuyau apportant de l'air depuis la surface)
+              ou le plus souvent en s'équipant d'une bouteille de plongée dans
+              le cas de la plongée en scaphandre autonome.
             </p>
           </Col>
         </Row>
-        <Row>
+        <Row className="row_2">
           <Col>
             <h2>Canoë-kayak</h2>
-            <span>4 heures 30 minutes ou plus · À partir de 55 DT</span>
             <p>
-              Le canoë-kayak est une activité physique de loisir ou sportive,
+              4 heures 30 minutes ou plus · À partir de 55 DT <br /> Le
+              canoë-kayak est une activité physique de loisir ou sportive,
               pratiquée avec des embarcations propulsées à la pagaie, notamment
               le canoë, le kayak, le raft, ou la pirogue. Cette activité est
               également désignée par « sports de pagaie ».
@@ -110,16 +109,16 @@ function Services() {
             <Kayak />
           </Col>
         </Row>
-        <Row>
+        <Row className="row_1">
           <Col>
             <Speleologie />
           </Col>
           <Col>
             <h2>Spéléologie</h2>
-            <span>4 heures 30 minutes ou plus · À partir de 55 DT</span>
             <p>
-              La spéléologie est une activité à multiples facettes :
-              scientifique, sportive, technique, contemplative. Elle se pratique
+              4 heures 30 minutes ou plus · À partir de 55 DT <br /> La
+              spéléologie est une activité à multiples facettes : scientifique,
+              sportive, technique, contemplative. Elle se pratique
               principalement dans les régions karstiques. Cependant les
               spéléologues s'intéressent aussi aux cavités tectoniques,
               volcaniques (tunnels de lave), glaciaires et anthropiques
@@ -127,13 +126,14 @@ function Services() {
             </p>
           </Col>
         </Row>
-        <Row>
+        <Row className="row_2">
           <Col>
             <h2>Tyrolienne</h2>
-            <span>5 heures 30 minutes ou plus · À partir de 55 DT</span>
+
             <p>
-              La tyrolienne est un système de transport sur filin. Il s'agit
-              d'un mode de déplacement utilisé pour la traversée en hauteur d'un
+              5 heures 30 minutes ou plus · À partir de 55 DT <br /> La
+              tyrolienne est un système de transport sur filin. Il s'agit d'un
+              mode de déplacement utilisé pour la traversée en hauteur d'un
               obstacle dénivelé comme une douve ou autre cuvette naturelle ou
               artificielle.
             </p>

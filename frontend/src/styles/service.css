@@ -7,6 +7,15 @@
   background-size: cover;
   color: white;
 }
+.container_service2 h1 {
+  margin-top: 15px;
+}
+.container_service2 {
+  margin-top: 10px;
+  background-color: rgba(0, 0, 0, 0.671);
+  border-radius: 10px;
+  padding: 5px;
+}
 .video_pres {
   height: 300px;
   border: none !important;
@@ -22,4 +31,68 @@
 .all_carousel .carousel,
 .all_carousel .carousel img {
   max-height: 300px;
+}
+#services .col {
+  margin: auto;
+  justify-content: center;
+}
+.iframestyle {
+  width: 560px;
+  height: 315px;
+}
+#services h2 {
+  color: orangered;
+}
+#services p,
+#services span {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .serviceheader {
+    flex-direction: column;
+  }
+  .iframestyle {
+    width: 560px;
+    height: 415px;
+  }
+  .row_1,
+  .row_2 {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    margin: auto !important;
+  }
+  .row_1 {
+    margin-top: 10px;
+    flex-direction: column-reverse;
+  }
+  #services .container,
+  .container-sm {
+    max-width: 100%;
+  }
+  .row_1 .col,
+  .row_2 .col {
+    margin-top: 10px !important;
+  }
+  #services h2 {
+    text-align: center;
+    color: orangered;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .serviceheader p,
+  .container_service2 p {
+    font-size: 13px;
+  }
+  #services h2,
+  #services h1 {
+    font-size: 22px;
+  }
+  #services .container,
+  .container-sm {
+    width: 100% !important;
+  }
 }

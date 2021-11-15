@@ -13,16 +13,14 @@ const Home = () => {
     <div id="home">
       <div data-aos="fade-down" className="imglogo">
         <img src={logo} alt="bonjour"></img>
-      </div>
 
-      <div className="btnHome" data-aos="fade-up">
         <div className="container33">
-          <Link to="/services">
+          <Link to="/services" className="decoA">
             <button type="button" className="button2">
               <span>Nous découvrir</span>
             </button>
           </Link>
-          <Link to="/list-event">
+          <Link to="/list-event" className="decoA">
             <button type="button" className="button">
               <span>Participer !</span>
             </button>

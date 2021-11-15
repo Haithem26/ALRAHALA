@@ -18,14 +18,16 @@ const Navi = () => {
     <div className="navigation">
       <Navbar bg="dark" expand="sm" fixed="top" variant="dark">
         <Container>
-          <Navbar.Brand href="/">
-            <img
-              src={logo}
-              width="70"
-              height="60"
-              className="d-inline-block align-top"
-              alt="logo"
-            />
+          <Navbar.Brand>
+            <a href="/">
+              <img
+                src={logo}
+                width="70"
+                height="60"
+                className="d-inline-block align-top"
+                alt="logo"
+              />{" "}
+            </a>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse
@@ -36,12 +38,10 @@ const Navi = () => {
               <Nav.Link href="/">Acceuil</Nav.Link>
               <Nav.Link href="/services">Services</Nav.Link>
               <Nav.Link href="/list-event">Evénements</Nav.Link>
-              <Nav.Link href="/about_us">A Propos</Nav.Link>
+              <Nav.Link href="/about_us">Apropos</Nav.Link>
               <Nav.Link href="/contact">Contact</Nav.Link>
-              <Nav.Link href="/sign-up">Inscription</Nav.Link>
-              {!isAuthenticated ? (
-                <Nav.Link href="/login_password">Connexion</Nav.Link>
-              ) : (
+
+              {!isAuthenticated ? null : (
                 <Nav.Link onClick={handleLogout}>Deconnexion</Nav.Link>
               )}
             </Nav>

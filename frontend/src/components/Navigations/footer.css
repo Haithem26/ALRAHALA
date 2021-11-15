@@ -2,33 +2,41 @@
 
 #footer {
   padding: 20px 0 0 0;
-  height: 300px;
-  background-color: black;
-  border: 1px solid black;
+  background-color: #be2f3b;
   color: white;
 }
 .col_follow {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 1px solid black;
 }
-.col_follow h3 {
+.col_adress {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.col_map {
   text-align: center;
 }
 .wrapper {
   margin-top: 20px !important;
   margin: auto;
 }
-
-.row_2 {
+.top_footer {
+  display: flex;
+  flex-direction: column;
   margin: auto;
-  border: 1px solid black;
+  justify-content: center;
+}
+.top_footer ul {
+  list-style-type: none;
+  letter-spacing: 1.5px;
+  font-size: 18px;
+}
+.col_adress h3 {
   text-align: center;
 }
-.col_adress {
-  text-align: center;
-}
+
 /* style of icons social media*/
 .wrapper .button {
   display: inline-block;
@@ -87,6 +95,7 @@
 .wrapper .button:hover .icon i {
   color: #fff;
 }
+/*text */
 .wrapper .button span {
   font-size: 20px;
   font-weight: 500;
@@ -94,21 +103,67 @@
   margin-left: 10px;
   transition: all 0.3s ease-out;
 }
+/*color*/
 .wrapper .button:nth-child(1) span {
   color: #4267b2;
 }
 .wrapper #instagram span {
   color: #e1306c;
 }
-
 .wrapper #youtube span {
   color: #ff0000;
 }
-
+/*map*/
 Iframe {
   width: 100%;
-  height: 200px;
-  border-radius: 10px;
+  height: 400px;
   margin: auto;
-  border: 1px solid red;
+}
+.copyright {
+  color: white;
+  text-align: center;
+  margin-top: 15px;
+}
+@media screen and (max-width: 768px) {
+  .top_row {
+    flex-direction: column;
+  }
+  Iframe {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .top_footer ul {
+    list-style-type: none;
+    letter-spacing: 0px;
+    font-size: 16px;
+  }
+  Iframe {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 375px) {
+  /* style of icons social media*/
+  .wrapper .button {
+    height: 40px;
+    width: 40px;
+    border-radius: 30px;
+  }
+  .wrapper .button .icon {
+    height: 40px;
+    width: 40px;
+    border-radius: 30px;
+    line-height: 40px;
+  }
+  .wrapper .button .icon i {
+    font-size: 18px;
+    line-height: 40px;
+  }
+  .wrapper .button span {
+    font-size: 15px;
+    line-height: 40px;
+  }
+  .wrapper .button:hover {
+    width: 140px;
+  }
 }
