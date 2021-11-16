@@ -5,6 +5,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { getItem } from "../../services/LocaleStorage";
 import { hasAuthenticated } from "../../services/AuthApi";
+import { isEmpty } from "../utils";
 
 export default class ListEvent extends Component {
   constructor(props) {
@@ -33,7 +34,6 @@ export default class ListEvent extends Component {
   render() {
     const events = this.state.events;
     let eventList;
-
     if (!events) {
       eventList = "pas d'évennement disponible pour le moment ";
     } else if (!this.isauth) {
@@ -156,13 +156,17 @@ export default class ListEvent extends Component {
                             to={`/update-event/${event._id}`}
                             className="btn-access"
                           >
-                            <Button variant="warning">Modifier</Button>
+                            <Button variant="warning" className="color_button">
+                              Modifier
+                            </Button>
                           </Link>
                           <Link
                             to={`/single-event/${event._id}`}
                             className="btn-access"
                           >
-                            <Button variant="info">Consulter</Button>{" "}
+                            <Button variant="info" className="color_button">
+                              Consulter
+                            </Button>{" "}
                           </Link>
                         </div>
                       </div>

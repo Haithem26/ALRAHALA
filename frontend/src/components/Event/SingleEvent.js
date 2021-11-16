@@ -106,7 +106,9 @@ export default class SingleEvent extends Component {
                       to={`/update-event/${event._id}`}
                       className="btn-access"
                     >
-                      <Button variant="warning">Modifier</Button>
+                      <Button variant="warning" className="color_button">
+                        Modifier
+                      </Button>
                     </Link>
                     <Button
                       onClick={this.onDeleteClick}
@@ -159,9 +161,6 @@ export default class SingleEvent extends Component {
                       </li>
                       <li>
                         <span>Prix: </span> {event.price} dt
-                      </li>
-                      <li>
-                        <span>Description: </span>
                       </li>
                     </ul>
                     <h4> Description:</h4>

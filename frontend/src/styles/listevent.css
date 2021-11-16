@@ -73,3 +73,6 @@
 .header_card span {
   font-weight: bold;
 }
+.color_button {
+  color: white !important;
+}
