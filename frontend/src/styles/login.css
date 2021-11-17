@@ -1,0 +1,84 @@
+#sign-in {
+  background-color: white;
+  height: 90vh;
+  /*background-color: rgb(230, 230, 230);*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.signinContainer {
+  background-color: white;
+  border-radius: 10px;
+}
+
+.colImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  min-height: 400px;
+}
+.colForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  min-height: 400px;
+  background-color: #e63946;
+  border-radius: 10px;
+}
+.colImg .signinImg {
+  height: 100%;
+  width: 100%;
+}
+.colImg .signinImg img {
+  height: 100%;
+  width: 100%;
+}
+.signForm {
+  background-color: white;
+  border-radius: 10px;
+  width: 70%;
+  margin: auto;
+  padding: 10px;
+  box-shadow: 5px 5px 5px black;
+}
+
+#sign-in .form-label {
+  font-weight: bold;
+  margin-left: 10%;
+}
+#sign-in .form-control {
+  width: 80%;
+  margin: auto;
+}
+#sign-in .btn-primary {
+  float: right;
+}
+#sign-in .title_signin {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+}
+#sign-in .group_title {
+  justify-content: center;
+  display: flex;
+}
+
+#sign-in .btn-primary {
+  color: #fff;
+  background-color: #e63946;
+  border-color: #e63946;
+}
+#sign-in .btn-primary:hover {
+  color: #fff;
+  background-color: #a01823;
+  border-color: #a01823;
+}
+
+.err_text {
+  color: red;
+  margin-left: 10%;
+}

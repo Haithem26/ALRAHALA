@@ -1,0 +1,30 @@
+@import "./styles/home.css";
+@import "./styles/login.css";
+@import "./styles/newevent.css";
+@import "./styles/singleevent.css";
+@import "./styles/listevent.css";
+@import "./styles/service.css";
+@import "./styles//contact.css";
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "./components/Navigations/navi.css";
+@import "./components/Navigations/footer.css";
+@import "./styles/signup.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+#listevent,
+#sign-up,
+#services,
+#singleevent,
+#updatepage,
+#contact {
+  padding-top: 100px;
+}
+.new_event {
+  padding-top: 120px;
+}

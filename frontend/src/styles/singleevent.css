@@ -1,0 +1,60 @@
+#singleevent {
+  background-image: url("../images/nat2.jpg");
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.single_card {
+  padding-top: 20px;
+  border-radius: 5px;
+  width: 60% !important;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.466);
+  box-shadow: 10px 10px 10px black;
+}
+.sinImg {
+  height: 300px;
+  width: 90%;
+  margin: auto;
+  border-radius: 5px;
+}
+.sinImg img {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+.singbody h1 {
+  text-align: center;
+}
+.singbody ul li span {
+  font-weight: bold;
+}
+.all_btn_sing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.descrip {
+  background-color: rgba(0, 0, 0, 0.726);
+  overflow: auto;
+  max-height: 400px;
+}
+@media screen and (max-width: 992px) {
+  .single_card {
+    width: 90% !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .single_card {
+    width: 100% !important;
+    font-size: 13px;
+  }
+
+  .singbody h1 {
+    font-size: 20px;
+  }
+}

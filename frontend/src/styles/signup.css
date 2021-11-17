@@ -1,0 +1,10 @@
+#sign-up .title_signin {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+}
+#sign-up .group_title {
+  justify-content: center;
+  display: flex;
+}

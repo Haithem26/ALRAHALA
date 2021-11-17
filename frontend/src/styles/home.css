@@ -1,0 +1,99 @@
+#home {
+  background-image: url("../images/rahla.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;*/
+  margin: auto;
+}
+
+.imglogo {
+  padding-top: 100px;
+  width: 50%;
+  /* border: 1px solid red;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: auto !important;
+}
+
+.imglogo img {
+  width: 50%;
+  height: 80%;
+  display: flex;
+  margin: auto;
+  /* border: 1px solid rgb(161, 255, 161);*/
+}
+
+.btnHome {
+  margin: auto;
+  width: 00px;
+  height: 100px;
+  bottom: 0;
+  float: inline-end;
+  margin-top: -40px;
+}
+.container33 {
+  /* border: 3px solid red;*/
+  margin: auto;
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+.container33 .button,
+.container33 .button2 {
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px black;
+  border: none;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  color: black;
+  font-weight: 600;
+  font-size: 15px;
+  background-color: rgba(255, 255, 255, 0.808);
+  padding: 15px 50px;
+  margin: 0 auto;
+}
+.container33 .button span,
+.container33 .button2 span {
+  position: relative;
+  z-index: 1;
+}
+.container33 .button:after,
+.container33 .button2:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 470%;
+  width: 140%;
+  background: orangered;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: translateX(-100%) translateY(-25%) rotate(45deg);
+  transform: translateX(-100%) translateY(-25%) rotate(45deg);
+}
+.container33 .button2:after {
+  -webkit-transform: translateX(-100%) translateY(-35%) rotate(45deg);
+  transform: translateX(-100%) translateY(-35%) rotate(45deg);
+}
+.container33 .button:hover:after,
+.container33 .button2:hover:after {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+.decoA {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 670px) {
+}
